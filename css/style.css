@@ -1,0 +1,506 @@
+/* ===== 기본 설정 ===== */
+:root {
+  --mango-orange: #FF8C42;
+  --mango-yellow: #FFC15E;
+  --mango-dark: #2B2B2B;
+  --mango-gray: #6B6B6B;
+  --mango-light-bg: #FFF8F0;
+  --white: #FFFFFF;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--mango-dark);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== 헤더 / 네비게이션 ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav-logo img {
+  height: 36px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-menu a {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--mango-dark);
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--mango-orange);
+}
+
+.nav-cta {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--mango-orange);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #e67a2e;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--mango-orange);
+  color: var(--mango-orange);
+}
+
+.btn-outline:hover {
+  background: var(--mango-orange);
+  color: var(--white);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--mango-dark);
+  border-radius: 2px;
+}
+
+/* ===== 히어로 섹션 ===== */
+.hero {
+  background: linear-gradient(135deg, var(--mango-light-bg) 0%, #FFF3E0 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--mango-dark);
+}
+
+.hero h1 span {
+  color: var(--mango-orange);
+}
+
+.hero p {
+  font-size: 19px;
+  color: var(--mango-gray);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-image {
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ===== 섹션 공통 ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--mango-light-bg);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title .tag {
+  display: inline-block;
+  background: #FFF0DC;
+  color: var(--mango-orange);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.section-title p {
+  color: var(--mango-gray);
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+/* ===== 특징 카드 그리드 ===== */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 1px solid #EEE;
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255,140,66,0.15);
+}
+
+.feature-card .icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--mango-orange);
+}
+
+.feature-card p {
+  color: var(--mango-gray);
+  font-size: 15px;
+}
+
+/* ===== 통계 섹션 ===== */
+.stat-box {
+  text-align: center;
+}
+
+.stat-box .number {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--mango-orange);
+}
+
+.stat-box .label {
+  font-size: 18px;
+  color: var(--mango-gray);
+  margin-top: 8px;
+}
+
+/* ===== 솔루션 카드 (제품 페이지) ===== */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.solution-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #EEE;
+  transition: transform 0.25s;
+}
+
+.solution-card:hover {
+  transform: translateY(-4px);
+}
+
+.solution-card .thumb {
+  height: 180px;
+  background: var(--mango-light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.solution-card .content {
+  padding: 24px;
+}
+
+.solution-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.solution-card p {
+  font-size: 14px;
+  color: var(--mango-gray);
+}
+
+/* ===== 파트너 로고 ===== */
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.partner-logos img {
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity 0.2s, filter 0.2s;
+}
+
+.partner-logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* ===== CTA 섹션 ===== */
+.cta-section {
+  background: var(--mango-orange);
+  color: var(--white);
+  text-align: center;
+  padding: 70px 0;
+}
+
+.cta-section h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.cta-section p {
+  margin-bottom: 28px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.cta-section .btn-primary {
+  background: var(--white);
+  color: var(--mango-orange);
+}
+
+.cta-section .btn-primary:hover {
+  background: #f2f2f2;
+}
+
+/* ===== 회사소개 페이지 ===== */
+.about-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.timeline {
+  border-left: 3px solid var(--mango-orange);
+  padding-left: 24px;
+  margin-top: 16px;
+}
+
+.timeline-item {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--mango-orange);
+  border-radius: 50%;
+}
+
+.timeline-item .year {
+  font-weight: 800;
+  color: var(--mango-orange);
+}
+
+/* ===== 문의 페이지 ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.contact-info-card {
+  background: var(--mango-light-bg);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.contact-info-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.contact-info-item .icon {
+  font-size: 22px;
+}
+
+.kakao-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FEE500;
+  color: #3C1E1E;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.form-embed {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ===== 푸터 ===== */
+.footer {
+  background: var(--mango-dark);
+  color: #ccc;
+  padding: 50px 0 24px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-logo img {
+  height: 30px;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== 반응형 (모바일) ===== */
+@media (max-width: 768px) {
+  .nav-menu, .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 20px 24px;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-cta.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 220px;
+    left: 24px;
+    right: 24px;
+    z-index: 999;
+  }
+
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 16px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+
+  .about-block, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
