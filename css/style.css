@@ -161,15 +161,6 @@ img {
   justify-content: center;
 }
 
-.hero-image {
-  margin-top: 50px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
 /* ===== 섹션 공통 ===== */
 .section {
   padding: 80px 0;
@@ -206,7 +197,7 @@ img {
   margin-top: 12px;
 }
 
-/* ===== 특징 카드 그리드 ===== */
+/* ===== 특징 카드 그리드 (아이콘 없는 미니멀 버전) ===== */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -216,26 +207,22 @@ img {
 .feature-card {
   background: var(--white);
   border: 1px solid #EEE;
-  border-radius: 16px;
+  border-top: 3px solid var(--mango-orange);
+  border-radius: 8px;
   padding: 36px 28px;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(255,140,66,0.15);
-}
-
-.feature-card .icon {
-  font-size: 40px;
-  margin-bottom: 16px;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255,140,66,0.12);
 }
 
 .feature-card h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--mango-orange);
+  color: var(--mango-dark);
 }
 
 .feature-card p {
@@ -260,7 +247,7 @@ img {
   margin-top: 8px;
 }
 
-/* ===== 솔루션 카드 (제품 페이지) ===== */
+/* ===== 솔루션 카드 (제품 페이지, 미니멀 버전) ===== */
 .solution-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -268,33 +255,26 @@ img {
 }
 
 .solution-card {
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #EEE;
-  transition: transform 0.25s;
+  border-left: 4px solid var(--mango-orange);
+  transition: box-shadow 0.25s;
 }
 
 .solution-card:hover {
-  transform: translateY(-4px);
-}
-
-.solution-card .thumb {
-  height: 180px;
-  background: var(--mango-light-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .solution-card .content {
-  padding: 24px;
+  padding: 28px 32px;
 }
 
 .solution-card h3 {
   font-size: 19px;
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--mango-dark);
 }
 
 .solution-card p {
@@ -375,8 +355,8 @@ img {
   position: absolute;
   left: -30px;
   top: 4px;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: var(--mango-orange);
   border-radius: 50%;
 }
@@ -386,7 +366,7 @@ img {
   color: var(--mango-orange);
 }
 
-/* ===== 문의 페이지 ===== */
+/* ===== 문의 페이지 (미니멀 버전) ===== */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -395,44 +375,43 @@ img {
 
 .contact-info-card {
   background: var(--mango-light-bg);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 32px;
 }
 
 .contact-info-card h3 {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .contact-info-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   font-size: 15px;
 }
 
-.contact-info-item .icon {
-  font-size: 22px;
+.contact-info-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: var(--mango-dark);
 }
 
 .kakao-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-block;
   background: #FEE500;
   color: #3C1E1E;
   font-weight: 700;
-  padding: 12px 22px;
-  border-radius: 8px;
-  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .form-embed {
   width: 100%;
   min-height: 900px;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* ===== 푸터 ===== */
